@@ -14,7 +14,6 @@
 ## Simple and easy dynamic messages for crud actions
   - FlashMe is smart, and will can automatically build messages for CRUD actions
   - Ex: calling flash_message('alert') will generate a flash message of 'User successfully updated' when called in users#update
-  - The 'snoop' method can be called directly on the Model's class, this will print empty attributes to the console
 
 ## Customize messages for unique circumstances
   - Add a new message to /controllers/concerns/flash_me.rb' by adding a method to the file
