@@ -1,21 +1,18 @@
 $:.push File.expand_path("lib", __dir__)
 
-# Maintain your gem's version:
 require "flash_me/version"
 
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.name        = "flash_me"
   spec.version     = FlashMe::VERSION
   spec.authors     = ["Kevin J. Storberg"]
   spec.email       = ["kevin@storberg.net"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of FlashMe."
-  spec.description = "TODO: Description of FlashMe."
+  spec.homepage    = "https://github.com/ooftypop/flash_me"
+  spec.summary     = "A quick and dirty way to send a message"
+  spec.description = "A quick and dirty way to send a message"
   spec.license     = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
+
   if spec.respond_to?(:metadata)
     spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
   else
@@ -25,7 +22,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.add_dependency "rails", "~> 5.2.2", ">= 5.2.2.1"
+  spec.add_dependency "rails", ">= 5.1.4"
 
   spec.add_development_dependency "sqlite3"
 end
