@@ -1,5 +1,5 @@
-# FlashMe
-  A quick and dirty way to send a message.
+# Name
+  FlashMe
 
 
 
@@ -8,38 +8,47 @@
 
 
 
-<!-- # Usage
-  SnoopDogg is a nicer way to see Models
+# Usage
+  A quick and dirty way to send a message.
 
-## Simply call 'snoop' on a Model
-  - Call 'snoop' on any Model to view the Model's attributes printed out to the console
-  - The Model's attributes will be sorted, color coded, and printed to the console one line at a time
+## Simple and easy dynamic messages for crud actions
+  - FlashMe is smart, and will can automatically build messages for CRUD actions
+  - Ex: calling flash_message('alert') will generate a flash message of 'User successfully updated' when called in users#update
   - The 'snoop' method can be called directly on the Model's class, this will print empty attributes to the console
 
-## Feed 'snoop' arguments to view a Model's associations too
-  - 'snoop' can take arguments in the form of keys matching a Model's associations
-  - If the association is one-to-one, 'snoop' will find the associated record and print it below it's parent
-  - If the association is one-to-many, 'snoop' will print every associated record matching that relationship
-  - 'snoop' is powerful, it can print out multiple associations at once | e.g. User.first.snoop(:address, :comments) -->
+## Customize messages for unique circumstances
+  - Add a new message to /controllers/concerns/flash_me.rb' by adding a method to the file
+  - Name the method using the structure 'flash_name_of_method' so FlashMe can find it
+  - This method will return a hash containing all of the information about your message
+  - 'text' points to the actual content of the message
+  - 'type' points to the category of message (e.g. 'alert' or 'success')
+  - 'clear' tells FlashMe whether the message will be available to the next action
 
 
 
 # Installation
-  Add this line to your application's Gemfile:
+  1. Add this line to your application's Gemfile:
+      ```ruby
+      gem 'flash_me'
+      ```
 
-```ruby
-gem 'flash_me'
-```
+  2. Next execute:
+      ```bash
+      $ bundle
+      ```
 
-And then execute:
-```bash
-$ bundle
-```
+      Or install it yourself as:
+      ```bash
+      $ gem install flash_me
+      ```
 
-Or install it yourself as:
-```bash
-$ gem install flash_me
-```
+  3. Then install the FlashMe Controller Concern
+      ```bash
+      $ rails g flash_me:install
+      ```
+
+  4. Finally, include FlashMe in your controllers
+
 
 
 # Authors
