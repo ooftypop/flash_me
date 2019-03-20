@@ -58,7 +58,7 @@
 # Contributing
   We welcome collaboration on all of our open source projects.
 
-  When contributing to SnoopDogg, we ask that you:
+  When contributing to FlashMe, we ask that you:
   - notify us of your intended contribution so we may provide feedback
   - make a PR on Github with a short description of your changes
   - update any relevant documentation
