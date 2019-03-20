@@ -38,7 +38,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install snoop_dogg
+$ gem install flash_me
 ```
 
 

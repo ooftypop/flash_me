@@ -12,7 +12,13 @@ Gem::Specification.new do |spec|
   spec.description = "A quick and dirty way to send a message"
   spec.license     = "MIT"
 
-  spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  spec.files = Dir[
+    "{app,config,db,lib}/**/*",
+    "lib/generators/*",
+    "lib/generators/templates/*",
+    "MIT-LICENSE",
+    "Rakefile",
+    "README.md"]
 
   spec.add_dependency "rails", ">= 5.1.4"
 
